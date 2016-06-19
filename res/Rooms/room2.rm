@@ -1,0 +1,3 @@
+addDescription: Descr2 "Description of Room2";
+
+addExit: Room1 3;

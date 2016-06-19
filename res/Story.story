@@ -10,6 +10,8 @@ addThing: Ring;
 addRoom: Room1 ./res/Rooms/room1;
 addRoom: Room2 ./res/Rooms/room2;
 
+setStartRoom: Room1;
+
 addEvent: InInventory E1 Player Dagger;
 addEvent: InInventory E2 Player Key;
 addEvent: DeathOf E3 Watchman;
