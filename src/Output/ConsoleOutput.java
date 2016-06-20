@@ -56,11 +56,11 @@ public class ConsoleOutput {
 	private String getDirection(int direction){
 		switch(direction){
 			case 0:
-				return "Nord";
+				return "North";
 			case 1:
-				return "Ost";
+				return "East";
 			case 2: 
-				return "Sud";
+				return "South";
 			case 3:
 				return "West";
 			default:

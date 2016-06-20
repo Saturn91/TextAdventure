@@ -52,9 +52,9 @@ public class InputManager {
 	
 	private void HandleOutput(){
 		if(args[0].equals("goTo")){
-			if(args[1].equalsIgnoreCase("Nord")){cOutput.goTo(0); return;}
-			if(args[1].equalsIgnoreCase("Ost")){cOutput.goTo(1); return;}
-			if(args[1].equalsIgnoreCase("Sud")){cOutput.goTo(2); return;}
+			if(args[1].equalsIgnoreCase("North")){cOutput.goTo(0); return;}
+			if(args[1].equalsIgnoreCase("East")){cOutput.goTo(1); return;}
+			if(args[1].equalsIgnoreCase("South")){cOutput.goTo(2); return;}
 			if(args[1].equalsIgnoreCase("West")){cOutput.goTo(3); return;}
 		}
 	}
