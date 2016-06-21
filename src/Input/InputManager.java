@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import Entity.Main.EntityManager;
 import Output.ConsoleOutput;
 import StoryController.StoryController;
 
@@ -13,6 +14,7 @@ public class InputManager {
 	private final String empty[] = {"..."};
 	
 	public InputManager(ConsoleOutput cOutput) {
+		
 		this.cOutput = cOutput;
 	}
 	
@@ -51,11 +53,22 @@ public class InputManager {
 	}
 	
 	private void HandleOutput(){
+		//Switchcase not possible because of ignorecase
 		if(args[0].equalsIgnoreCase("go")){
-			if(args[1].equalsIgnoreCase("North")){cOutput.goTo(0); return;}
-			if(args[1].equalsIgnoreCase("East")){cOutput.goTo(1); return;}
-			if(args[1].equalsIgnoreCase("South")){cOutput.goTo(2); return;}
-			if(args[1].equalsIgnoreCase("West")){cOutput.goTo(3); return;}
+			if(args[1].equalsIgnoreCase("North")){cOutput.getStoryController().goTo(0); return;}
+			if(args[1].equalsIgnoreCase("East")){cOutput.getStoryController().goTo(1); return;}
+			if(args[1].equalsIgnoreCase("South")){cOutput.getStoryController().goTo(2); return;}
+			if(args[1].equalsIgnoreCase("West")){cOutput.getStoryController().goTo(3); return;}
 		}
+		
+		if(args[0].equalsIgnoreCase("take")){
+			if(cOutput.getStoryController().takeFromRoomInventory(args[1])){
+				EntityManager.getEntity(ConsoleOutput.player).addToInventory(args[1]);
+				System.out.println("taken!");
+			}else{
+				System.out.println("you can't see " + args[1]);
+			}
+		}
+		
 	}
 }

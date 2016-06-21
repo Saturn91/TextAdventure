@@ -1,3 +1,5 @@
 addDescription: Desc1 "The Door at the End is open!";
 
+addThing: Dagger;
+
 addExit: Room1 3;

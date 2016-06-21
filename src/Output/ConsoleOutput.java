@@ -5,10 +5,12 @@ import StoryController.StoryController;
 public class ConsoleOutput {
 	private boolean inDialog = false;
 	private static final int lineLenght = 75;
+	public static final String player = "---player---";
 	private StoryController storyController;
 	
 	public ConsoleOutput(StoryController storyController) {
 		this.storyController = storyController;
+		this.storyController.addPlayer(player);
 	}
 	
 	public void print(){
@@ -122,8 +124,8 @@ public class ConsoleOutput {
 		return output;
 	}
 	
-	public void goTo(int direction){
-		storyController.goTo(direction);
+	public StoryController getStoryController(){
+		return storyController;
 	}
 	
 	
