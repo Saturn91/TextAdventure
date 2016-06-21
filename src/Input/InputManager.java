@@ -51,7 +51,7 @@ public class InputManager {
 	}
 	
 	private void HandleOutput(){
-		if(args[0].equals("goTo")){
+		if(args[0].equalsIgnoreCase("go")){
 			if(args[1].equalsIgnoreCase("North")){cOutput.goTo(0); return;}
 			if(args[1].equalsIgnoreCase("East")){cOutput.goTo(1); return;}
 			if(args[1].equalsIgnoreCase("South")){cOutput.goTo(2); return;}
