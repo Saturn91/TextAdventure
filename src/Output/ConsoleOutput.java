@@ -73,7 +73,6 @@ public class ConsoleOutput {
 
 	private void printDialog() {
 		
-		
 	}
 	
 	private void printLine(){

@@ -14,7 +14,6 @@ public class InputManager {
 	private final String empty[] = {"..."};
 	
 	public InputManager(ConsoleOutput cOutput) {
-		
 		this.cOutput = cOutput;
 	}
 	
