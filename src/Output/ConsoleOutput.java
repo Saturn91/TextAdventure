@@ -4,7 +4,7 @@ import StoryController.StoryController;
 
 public class ConsoleOutput {
 	private boolean inDialog = false;
-	private static final int lineLenght = 50;
+	private static final int lineLenght = 75;
 	private StoryController storyController;
 	
 	public ConsoleOutput(StoryController storyController) {
@@ -102,6 +102,8 @@ public class ConsoleOutput {
 			for(int i = 0; i < lines.length; i++){
 				System.out.println(lines[i]);
 			}
+		}else{
+			System.out.println(text);
 		}
 	}
 	
