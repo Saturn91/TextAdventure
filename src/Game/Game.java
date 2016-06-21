@@ -21,6 +21,7 @@ public class Game {
 	}
 
 	public void tick(){
+		storyController.tick();
 		if(!isFirst){
 			inputManager.getNextInput();
 		}else{
