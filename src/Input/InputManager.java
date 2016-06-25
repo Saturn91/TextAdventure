@@ -69,5 +69,8 @@ public class InputManager {
 			}
 		}
 		
+		if(args[0].equalsIgnoreCase("talk")){
+			cOutput.getStoryController().openDialog(args[1]);
+		}
 	}
 }
