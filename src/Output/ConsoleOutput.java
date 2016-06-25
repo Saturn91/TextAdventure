@@ -7,10 +7,10 @@ public class ConsoleOutput {
 	private static final int lineLenght = 75;
 	public static final String player = "---player---";
 	private StoryController storyController;
+	private String talkingTo;
 	
 	public ConsoleOutput(StoryController storyController) {
 		this.storyController = storyController;
-		this.storyController.addPlayer(player);
 	}
 	
 	public void print(){
@@ -72,7 +72,13 @@ public class ConsoleOutput {
 	}
 
 	private void printDialog() {
-		
+		System.out.println();
+		printLine();
+		printTitel(talkingTo + ":");
+		printLine();
+		printTitel(storyController.getOpenDialogText());
+		printLine();
+		printText("type [next] to get next Text");
 	}
 	
 	private void printLine(){
@@ -125,6 +131,18 @@ public class ConsoleOutput {
 	
 	public StoryController getStoryController(){
 		return storyController;
+	}
+	
+	public void setInDialog(boolean inDialog){
+		this.inDialog = inDialog;
+	}
+	
+	public boolean isInDialog(){
+		return inDialog;
+	}
+	
+	public void setTalkingTo(String talkingTo){
+		this.talkingTo = talkingTo;
 	}
 	
 	

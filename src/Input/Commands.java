@@ -1,5 +1,5 @@
 package Input;
 
 public enum Commands {
-	look, nord, east, sud, west, take, inventory, go, talk;
+	look, nord, east, sud, west, take, inventory, go, talk, next;
 }

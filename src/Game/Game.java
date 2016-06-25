@@ -12,7 +12,7 @@ public class Game {
 	private boolean isFirst = true;
 
 	public Game() {
-		storyController = new StoryController("./res/Story");
+		storyController = new StoryController("./res/Story", ConsoleOutput.player);
 		cOutput = new ConsoleOutput(storyController);
 		inputManager = new InputManager(cOutput);
 		for (int i = 0; i < 50; i++) {

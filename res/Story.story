@@ -1,6 +1,10 @@
-addCreature: Player 10 Room1;
-addCreature: Watchman 15 Room2;
-addCreature: Lady 5 Room1;
+addCreature: Player 10;
+addCreature: Watchman 15;
+addCreature: Lady 5;
+
+setCreatureRoom: Lady Room1;
+setCreatureRoom: Watchman Room2;
+setCreatureRoom: Player Room1;
 
 addThing: Dagger;
 addThing: Key;

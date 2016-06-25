@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 
 import Entity.Main.EntityManager;
 import Output.ConsoleOutput;
-import StoryController.StoryController;
 
 public class InputManager {
 	private ConsoleOutput cOutput;
@@ -71,6 +70,16 @@ public class InputManager {
 		
 		if(args[0].equalsIgnoreCase("talk")){
 			cOutput.getStoryController().openDialog(args[1]);
+			cOutput.setTalkingTo(args[1]);
+			cOutput.setInDialog(true);
+		}
+		
+		if(args[0].equals("next")){
+			if(cOutput.isInDialog()){
+				cOutput.getStoryController().getNextDialogText();
+			}else{
+				System.out.println("no Dialog open!");
+			}	
 		}
 	}
 }
