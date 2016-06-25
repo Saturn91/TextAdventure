@@ -3,8 +3,6 @@ addDescription: Desc2 "The Door at the End is open!";
 addDescription: Desc3 "The Door at the End is closed!";
 addDescription: Desc4 "Something is vibrating in your pocket...";
 
-addDescriptionStoryEventIF: Desc2 E3 false;
-addDescriptionStoryEventIF: Desc2 E3 true;
 addDescriptionWatchEventIF: Desc4 true InInventory E100 Player Dagger 
 
 addExit: Room2 1;
